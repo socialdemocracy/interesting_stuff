@@ -199,42 +199,6 @@ blockquote + blockquote.attribution {
   float: right;
   right: 0.4em;
 }
-window.displayText = function (text) {
-    return applyWholesome(text);
-};
-
-function applyWholesome(str) {
-    const allWords = new Set([
-        ...tooltipList.map(t => t.searchString),
-        ...colourList.map(c => c.word)
-    ]);
-
-    const regex = new RegExp(`\\b(${[...allWords].join('|')})\\b`, 'g');
-
-    return str.replace(/(<(?:span|strong)[^>]*>.*?<\/(?:span|strong)>|<[^>]+>|[^<]+)/g, (segment) => {
-        if (segment.startsWith('<')) return segment;
-
-        return segment.replace(regex, (match) => {
-            const tooltip = tooltipList.find(t => t.searchString === match);
-            const colour = colourList.find(c => c.word === match);
-
-            let style = colour ? colour.style : '';
-            let innerText = match;
-
-            if (colour && colour.img) {
-                innerText = `<img src="${colour.img}" class="p_icon" alt="">${innerText}`;
-            }
-
-            if (tooltip) {
-                return `<span class='mytooltip' style='${style}'>${innerText}<span  class='mytooltiptext'>${tooltip.explanationText}</span></span>`;
-            } else if (colour) {
-                return `<span style='${style}'>${innerText}</span>`;
-            }
-
-            return match;
-        });
-    });
-}
 #qualities {
   text-indent: 0;
   line-height: 1.3em;
@@ -651,14 +615,46 @@ table {
 .seat.bsw {
     fill: #C40000;
 }
+.mytooltip {
+  position: relative;
+  cursor: pointer;
+  background-color: rgb(100, 140, 220, 0.5);
+  padding: 2px 5px;
+}
 
+.mytooltip:hover { background-color: rgb(100, 140, 220); }
+
+.mytooltip .mytooltiptext {
+  position: fixed;
+  z-index: 999999;
+  width: 260px;
+  background: #fff4e6;
+  color: #3b1f0a;
+  text-align: left;
+  border-radius: 8px;
+  padding: 12px 14px;
+  opacity: 0;
+  transition: opacity 0.1s ease-in-out, transform 0.1s ease-in-out;
+  border: 1px solid #b22222;
+  pointer-events: none;
+  font-size: 14px !important;
+  line-height: 1.5em !important;
+  font-weight: 500 !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
+  transform: translateY(5px);
+  text-align: center;
+}
+
+.mytooltip:hover .mytooltiptext { opacity: 1; }
+.mytooltip .mytooltiptext img { display: block; margin: 0 auto 4px auto; max-width: 90%; height: auto; }
+
+.mytooltip .mytooltiptext {
+  bottom: auto;
+  top: calc(var(--mouse-y, 0px) - 20px);
+  left: calc(var(--mouse-x, 0px));
+  transform: translate(-50%, -100%);
+}
 .tooltip-text {
     text-decoration: underline;
     text-decoration-style: dotted;
 }
-document.addEventListener('mousemove', e => {
-    document.querySelectorAll('.mytooltiptext').forEach(el => {
-        el.style.setProperty('--mouse-x', e.clientX + 'px');
-        el.style.setProperty('--mouse-y', e.clientY + 'px');
-    });
-});
