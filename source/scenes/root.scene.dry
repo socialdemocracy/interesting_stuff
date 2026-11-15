@@ -464,6 +464,7 @@ Q.economic_records = [];
 
 // State of the government
 Q.president = "Ursula";
+Q.president_party = "CVP";
 // starting chancellor: Angela Merkel
 Q.chancellor = "Merkel";
 Q.chancellor_party = 'CVP';
