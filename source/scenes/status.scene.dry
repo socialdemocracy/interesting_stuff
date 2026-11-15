@@ -43,9 +43,9 @@ Left Bloc Integrity: [+ left_unity : dissent +]
 
 = Government
 
-President: [+ president +] ([+ president_party +])
+President: [?if president_party == "SPD": <span style="color: var(--spd);">[+ president +]</span>?][?if president_party == "CVP": <span style="color: var(--cvp);">[+ president +]</span>?][?if president_party == "LSPD": <span style="color: var(--lspd);">[+ president +]</span>?][?if president_party == "CSRP": <span style="color: var(--csrp);">[+ president +]</span>?][?if president_party == "RDP": <span style="color: var(--rdp);">[+ president +]</span>?][?if president_party == "NLP": <span style="color: var(--nlp);">[+ president +]</span>?][?if president_party == "DNVP": <span style="color: var(--dnvp);">[+ president +]</span>?][?if president_party == "NDPD": <span style="color: var(--ndpd);">[+ president +]</span>?] ([+ president_party +])
 
-Chancellor: [+ chancellor +] ([+ chancellor_party +])
+Chancellor: [?if chancellor_party == "SPD": <span style="color: var(--spd);">[+ chancellor +]</span>?][?if chancellor_party == "CVP": <span style="color: var(--cvp);">[+ chancellor +]</span>?][?if chancellor_party == "LSPD": <span style="color: var(--lspd);">[+ chancellor +]</span>?][?if chancellor_party == "CSRP": <span style="color: var(--csrp);">[+ chancellor +]</span>?][?if chancellor_party == "RDP": <span style="color: var(--rdp);">[+ chancellor +]</span>?][?if chancellor_party == "NLP": <span style="color: var(--nlp);">[+ chancellor +]</span>?][?if chancellor_party == "DNVP": <span style="color: var(--dnvp);">[+ chancellor +]</span>?][?if chancellor_party == "NDPD": <span style="color: var(--ndpd);">[+ chancellor +]</span>?]  ([+ chancellor_party +])
 
 Reichstag composition:
 
