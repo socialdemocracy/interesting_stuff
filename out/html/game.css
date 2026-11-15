@@ -324,6 +324,16 @@ ul.decks, ul.hand, ul.pinned-cards {
 
 }
 
+:root {
+  --csrp: #FF7F00;
+  --spd: #c00000;
+  --lspd: #BE3075;
+  --cvp: #000000;
+  --rdp: #E0B0FF;
+  --nlp: #98c22c;
+  --dnvp: #3E88B3;
+  --ndpd: #D79E2A;
+  
 a.card {
   display: inline-block;
   width: 120px;
