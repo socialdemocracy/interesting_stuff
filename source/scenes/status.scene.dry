@@ -21,7 +21,7 @@ if (Q.economic_growth) {
 Resources available: [+ resources +]
 
 SPD position: [? if spd_toleration : toleration ?][? if spd_in_government : in government - ?][? if spd_toleration == 0 and spd_in_government == 0 and spd_caretaker == 0 : opposition ?][? if spd_caretaker : caretaker government ?]
-[? if in_april_coalition and spd_in_government: April Coalition ?][? if in_left_bloc and spd_in_government: <span style="color: #c00000;">**Left Bloc**</span> ?][? if in_socialist_coalition and spd_in_government: Socialist Coalition ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
+[? if in_april_coalition and spd_in_government: April Coalition ?][? if in_left_bloc and spd_in_government: <span style="color: var(--spd);">**Left Bloc**</span> ?][? if in_socialist_coalition and spd_in_government: Socialist Coalition ?][? if in_left_front and spd_in_government: Left Front ?][? if in_spd_majority and spd_in_government: SPD majority ?][? if in_minority_government and spd_in_government: minority government ?][? if in_emergency_government and spd_in_government: emergency government ?]
 
 [? if spd_government_burden_seen: Government Goals: [? if goal_spd_cancel == 0: [+ goal_spd_total +]?][? if goal_spd_cancel >= 1: Failed?] / 2 completed, due in [+ spd_government_burden_timer +] months ?]
 
@@ -49,7 +49,7 @@ Chancellor: [+ chancellor +] ([+ chancellor_party +])
 
 Reichstag composition:
 
-<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: #c00000;">**SPD**</span>: [+ spd_r +]% <span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**CVP**</span>: [+ cvp_r +]% <span class="tooltip-text" title="Left Social Democratic Party" style="color: #BE3075;">**LSPD**</span>: [+ lspd_r +]% <span class="tooltip-text" title="Christian Social Reform Party" style="color: #FF7F00;">**CSRP**</span>: [+ csrp_r +]% <span class="tooltip-text" title="Radical Democratic Party" style="color: #E0B0FF;">**RDP**</span>: [+ rdp_r +]% <span class="tooltip-text" title="National Liberal Party" style="color: #98C22C;">**NLP**</span>: [+ nlp_r +]% <span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_r +]% <span class="tooltip-text" title="National Democratic People's Party" style="color: #D79E2A;">**NDPD**</span>: [+ ndpd_r +]%
+<span class="tooltip-text" title="Social Democratic Party of Germany" style="color: var(--spd);">**SPD**</span>: [+ spd_r +]% <span class="tooltip-text" title="Christian People's Party" style="color: var(--cvp);">**CVP**</span>: [+ cvp_r +]% <span class="tooltip-text" title="Left Social Democratic Party" style="color: var(--lspd);">**LSPD**</span>: [+ lspd_r +]% <span class="tooltip-text" title="Christian Social Reform Party" style="color: var(--csrp);">**CSRP**</span>: [+ csrp_r +]% <span class="tooltip-text" title="Radical Democratic Party" style="color: var(--rdp);">**RDP**</span>: [+ rdp_r +]% <span class="tooltip-text" title="National Liberal Party" style="color: var(--nlp);">**NLP**</span>: [+ nlp_r +]% <span class="tooltip-text" title="German National People's Party" style="color: var(--dnvp);">**DNVP**</span>: [+ dnvp_r +]% <span class="tooltip-text" title="National Democratic People's Party" style="color: var(--ndpd);">**NDPD**</span>: [+ ndpd_r +]%
 **Others**: [+ other_r +]%
 
 [? if spd_in_government = 1 : Budget: [+ budget +] ?]
@@ -73,19 +73,19 @@ Economic growth: [+ economic_growth_2 +]%
 = Inter-party Relations
 
 
-<span class="tooltip-text" title="Christian People's Party" style="color: #000000;">**CVP**</span>: [+ cvp_relation : relationships +]
+<span class="tooltip-text" title="Christian People's Party" style="color: var(--cvp);">**CVP**</span>: [+ cvp_relation : relationships +]
 
-<span class="tooltip-text" title="Left Social Democratic Party" style="color: #BE3075;">**LSPD**</span>: [+ lspd_relation : relationships +]
+<span class="tooltip-text" title="Left Social Democratic Party" style="color: var(--lspd);">**LSPD**</span>: [+ lspd_relation : relationships +]
 
-<span class="tooltip-text" title="Christian Social Reich Party" style="color: #FF7F00;">**CSRP**</span>: [+ csrp_relation : relationships +]
+<span class="tooltip-text" title="Christian Social Reich Party" style="color: var(--csrp);">**CSRP**</span>: [+ csrp_relation : relationships +]
 
-<span class="tooltip-text" title="Radical Democratic Party" style="color: #E0B0FF;">**RDP**</span>: [+ rdp_relation : relationships +]
+<span class="tooltip-text" title="Radical Democratic Party" style="color: var(--rdp);">**RDP**</span>: [+ rdp_relation : relationships +]
 
-<span class="tooltip-text" title="National Liberal Party" style="color: #98C22C;">**NLP**</span>: [+ nlp_relation : relationships +]
+<span class="tooltip-text" title="National Liberal Party" style="color: var(--nlp);">**NLP**</span>: [+ nlp_relation : relationships +]
 
-<span class="tooltip-text" title="German National People's Party" style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_relation : relationships +]
+<span class="tooltip-text" title="German National People's Party" style="color: var(--dnvp);">**DNVP**</span>: [+ dnvp_relation : relationships +]
 
-<span class="tooltip-text" title="National Democratic Party of Germany" style="color: #D79E2A;">**NDPD**</span>: [+ ndpd_relation : relationships +]
+<span class="tooltip-text" title="National Democratic Party of Germany" style="color: var(--ndpd);">**NDPD**</span>: [+ ndpd_relation : relationships +]
 
 
 = Internal Factions of the SPD
@@ -111,22 +111,22 @@ if (Q.right_youth) {
 
 = Paramilitaries
 
-<span class="tooltip-text" title="The "Young Socialists" are a popular organization for defending democracy and socialism, mostly affiliated with the SPD." style="color: #c00000;">**Jusos**</span> Strength: [+ left_youth_2 +] thousand
+<span class="tooltip-text" title="The "Young Socialists" are a popular organization for defending democracy and socialism, mostly affiliated with the SPD." style="color: var(--spd);">**Jusos**</span> Strength: [+ left_youth_2 +] thousand
 
-<span style="color: #c00000;">**Left**</span> Mobilization: [+ left_mobilization : militancy +]
+<span style="color: var(--spd);">**Left**</span> Mobilization: [+ left_mobilization : militancy +]
 
-<span class="tooltip-text" title="The "Young Nationalists" are the right wing youth organization." style="color: #D79E2A;">**Junge Nationalisten**</span> Strength: [+ right_youth_2 +] thousand
+<span class="tooltip-text" title="The "Young Nationalists" are the right wing youth organization." style="color: var(--ndpd);">**Junge Nationalisten**</span> Strength: [+ right_youth_2 +] thousand
 
-<span style="color: #D79E2A;">**Right**</span> Mobilization: [+ right_mobilization : militancy +]
+<span style="color: var(--ndpd);">**Right**</span> Mobilization: [+ right_mobilization : militancy +]
 
 
 <h1>Social Media Presence</h1>
 
-<span style="color: #c00000;">**Leftist**</span>: [+ left_force +]%
+<span style="color: var(--spd);">**Leftist**</span>: [+ left_force +]%
 
-<span style="color: #D79E2A;">**Right**</span>: [+ right_force +]%
+<span style="color: var(--ndpd);">**Right**</span>: [+ right_force +]%
 
-Currently, Social Media [? if left_force > right_force: is dominated by <span style="color: #c00000;">left</span> wing ?][? if right_force > left_force: is dominated by <span style="color: #D79E2A;">right</span>-wing?][? if right_force == left_force: does not have a noticeable bias in its ?] content.
+Currently, Social Media [? if left_force > right_force: is dominated by <span style="color: var(--spd);">left</span> wing ?][? if right_force > left_force: is dominated by <span style="color: var(--ndpd);">right</span>-wing?][? if right_force == left_force: does not have a noticeable bias in its ?] content.
 
 
 = Official military/paramilitaries
@@ -152,21 +152,21 @@ Q.socialism_disp = Math.round(Q.socialism);
 
 (if the election were to be held now):
 
-<span style="color: #c00000;">**SPD**</span>: [+ spd_votes +]%
+<span style="color: var(--spd);">**SPD**</span>: [+ spd_votes +]%
 
-<span style="color: #000000;">**CVP**</span>: [+ cvp_votes +]%
+<span style="color: var(--cvp);">**CVP**</span>: [+ cvp_votes +]%
 
-<span style="color: #BE3075;">**LSPD**</span>: [+ lspd_votes +]%
+<span style="color: var(--lspd);">**LSPD**</span>: [+ lspd_votes +]%
 
-<span style="color: #FF7F00;">**CSRP**</span>: [+ csrp_votes +]%
+<span style="color: var(--csrp);">**CSRP**</span>: [+ csrp_votes +]%
 
-<span style="color: #E0B0FF;">**RDP**</span>: [+ rdp_votes +]%
+<span style="color: var(--rdp);">**RDP**</span>: [+ rdp_votes +]%
 
-<span style="color: #98C22C;">**NLP**</span>: [+ nlp_votes +]%
+<span style="color: var(--nlp);">**NLP**</span>: [+ nlp_votes +]%
 
-<span style="color: #3E88B3;">**DNVP**</span>: [+ dnvp_votes +]%
+<span style="color: var(--dnvp);">**DNVP**</span>: [+ dnvp_votes +]%
 
-<span style="color: #D79E2A;">**NDPD**</span>: [+ ndpd_votes +]%
+<span style="color: var(--ndpd);">**NDPD**</span>: [+ ndpd_votes +]%
 
 **Others**: [+ other_votes +]%
 
