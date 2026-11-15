@@ -10,12 +10,12 @@ max-visits: 12
 
 = Inter-Party Relationships
 
-The <span style="color: #c00000;">**SPD**</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the <span style="color: #c00000;">**Left Bloc**</span> of the <span style="color: #c00000;">**SPD**</span>, <span style="color: #BE3075;">socialist</span>, <span style="color: #FF7F00;">christian</span> and <span style="color: #E0B0FF;">liberal</span> parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
+The <span style="color: var(--spd);">**SPD**</span> cannot govern by itself yet. Because we do not have an electoral majority, we need the support of other parties. Recently, our governments have consisted of the <span style="color: var(--spd);">**Left Bloc**</span> of the <span style="color: var(--spd);">**SPD**</span>, <span style="color: var(--lspd);">socialist</span>, <span style="color: var(--csrp);">christian</span> and <span style="color: var(--rdp);">liberal</span> parties. We can reach out and build additional connections with these parties, or perhaps we can stand alone.
 
-- @liberals: Strengthen our bonds with the left-liberal <span style="color: #E0B0FF;">Radical Democratic Party</span>.
-- @christian: Strengthen our bonds with the <span style="color: #000000;">Christian People's Party</span> and the <span style="color: #FF7F00;">Christian Social Reich Party</span>. 
-- @lspd: Work towards repairing relationships with the <span style="color: #BE3075;">Left Social Democratic Party</span>.
-- @spd_alone: The <span style="color: #c00000;">**SPD**</span> can stand alone for now.
+- @liberals: Strengthen our bonds with the left-liberal <span style="color: var(--rdp);">Radical Democratic Party</span>.
+- @christian: Strengthen our bonds with the <span style="color: var(--cvp);">Christian People's Party</span> and the <span style="color: var(--csrp);">Christian Social Reich Party</span>. 
+- @lspd: Work towards repairing relationships with the <span style="color: var(--lspd);">Left Social Democratic Party</span>.
+- @spd_alone: The <span style="color: var(--spd);">**SPD**</span> can stand alone for now.
 - @easy_discard
 
 
@@ -25,7 +25,7 @@ choose-if: resources >= 1
 unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; lspd_relation += 5; lspd_relation += 3 if left_strength > reformist_strength; lspd_relation -= 4 if in_april_coalition
 
-We are improving relations with the <span style="color: #BE3075;">**socialists**</span>, who are the most skeptcist of their participation in the <span style="color: #c00000;">**Left Bloc**</span>. [? if left_strength > reformist_strength: With the <span style="color: #c00000;">**SPD**</span> being led by the left, our efforts prove themeselves much easier. ?] [? if in_april_coalition: Since the <span style="color: #BE3075;">**LSPD**</span> is excluded from government, they are way less trustful of us. ?]
+We are improving relations with the <span style="color: var(--lspd);">**socialists**</span>, who are the most skeptcist of their participation in the <span style="color: var(--spd);">**Left Bloc**</span>. [? if left_strength > reformist_strength: With the <span style="color: var(--spd);">**SPD**</span> being led by the left, our efforts prove themeselves much easier. ?] [? if in_april_coalition: Since the <span style="color: var(--lspd);">**LSPD**</span> is excluded from government, they are way less trustful of us. ?]
 
 @christian
 subtitle: -1 resources
@@ -37,17 +37,17 @@ go-to: christian_op if cvp_in_government = 1 and spd_in_government = 0 and chanc
 @christian_op
 on-arrival: cvp_relation += 5*(1 - dissent)
 
-We are currently in opposition to the <span style="color: #000000;">**Center**</span>-led government, but that does not preclude the general building of feelings of good will. The <span style="color: #FF7F00;">**CSRP**</span> is easier to cooperate with, given their long history with us.
+We are currently in opposition to the <span style="color: var(--cvp);">**Center**</span>-led government, but that does not preclude the general building of feelings of good will. The <span style="color: var(--csrp);">**CSRP**</span> is easier to cooperate with, given their long history with us.
 
 @christian_coalition
 on-arrival: cvp_relation += 8*(1 - dissent)
 
-We are currently coalition partners with the <span style="color: #000000;">**CVP**</span>, so improving relations comes naturally. The <span style="color: #FF7F00;">**CSRP**</span> is also easy to cooperate with, given their long history with us.
+We are currently coalition partners with the <span style="color: var(--cvp);">**CVP**</span>, so improving relations comes naturally. The <span style="color: var(--csrp);">**CSRP**</span> is also easy to cooperate with, given their long history with us.
 
 @christian_merz
 on-arrival: cvp_relation += 5*(1 - dissent)
 
-The Merz semi-autocratic regime makes building friendly relations with the <span style="color: #000000;">**CVP**</span> difficult, but not impossible. The <span style="color: #FF7F00;">**CSRP**</span> is easier to cooperate with, given their long history with us.
+The Merz semi-autocratic regime makes building friendly relations with the <span style="color: var(--cvp);">**CVP**</span> difficult, but not impossible. The <span style="color: var(--csrp);">**CSRP**</span> is easier to cooperate with, given their long history with us.
 
 @liberals
 subtitle: -1 resources
@@ -56,7 +56,7 @@ unavailable-subtitle: Not enough resources.
 on-arrival: resources -= 1; ddp_relation += 5*(1 - dissent)
 go-to: rdp_green if rdp_leader = "Annalena"; rdp_liberal if rdp_leader != "Annalena"
 
-The <span style="color: #E0B0FF;">**RDP**</span> has been one of our closest allies through the course of the Republic. 
+The <span style="color: var(--rdp);">**RDP**</span> has been one of our closest allies through the course of the Republic. 
 
 @rdp_green
 on-arrival: rdp_relation += 7
