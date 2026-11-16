@@ -13,6 +13,14 @@ const colourList = [{
         style: "color: var(--lspd); font-weight: bold;",
    },
     {
+        word: "BVP",
+        style: "color: var(--bvp); font-weight: bold;",
+   },
+    {
+        word: "Others",
+        style: "font-weight: bold;",
+   },
+    {
         word: "CVP",
         style: "color: var(--cvp); font-weight: bold;",
    },
