@@ -17,12 +17,12 @@ const colourList = [{
         style: "color: var(--bvp); font-weight: bold;",
    },
     {
-        word: "Others",
-        style: "font-weight: bold;",
-   },
-    {
         word: "CVP",
         style: "color: var(--cvp); font-weight: bold;",
+   },
+    {
+        word: "KVP",
+        style: "color: var(--kvp); font-weight: bold;",
    },
     {
         word: "CSRP",
