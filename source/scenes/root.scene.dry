@@ -21,8 +21,8 @@ on-arrival: {!
 Q.started = 1;
 // time elapsed (in months)
 Q.time = 1;
-Q.year = 1928;
-Q.month = 1;
+Q.year = 2021;
+Q.month = 5;
 // how many actions have been taken this month?
 Q.month_actions = 0;
 
@@ -646,9 +646,9 @@ Q.n_elections = 0;
 Q.no_majority_elections = 0;
 // elections are not on a timer, but rather there is an indicator for whether you're in an electoral cycle.
 Q.in_election = 1;
-Q.next_election_year = 1928;
-Q.next_election_month = 5;
-Q.next_election_time = 5;
+Q.next_election_year = 2021;
+Q.next_election_month = 9;
+Q.next_election_time = 4;
 // government affairs timers
 Q.spd_government_burden_timer = 0;
 Q.agricultural_policy_timer = 0;
@@ -768,7 +768,7 @@ audio: shuffle music/fruhlingslied.mp3
 new-page: true
 go-to: main if difficulty >= 0; main.main_easy if difficulty < 0
 
-= 1928
+= **2021**
 
 It is a bright time for German democracy. After a period of struggle, inflation is finally under control, and the economy is expanding steadily. In foreign policy, we have reached agreements with the Western powers and the Soviet Union that might make genuine peace a reality. 
 
